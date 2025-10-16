@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Chúc mừng ngày 20/10</title>
+  <link rel="stylesheet" href="./asset/style.css">
+  <script src="./asset/jquery.min.js"></script>
+  <script src="./asset/jscex.min.js"></script>
+  <script src="./asset/jscex-parser.js"></script>
+  <script src="./asset/jscex-jit.js"></script>
+  <script src="./asset/jscex-builderbase.min.js"></script>
+  <script src="./asset/jscex-async.min.js"></script>
+  <script src="./asset/jscex-async-powerpack.min.js"></script>
+  <script src="./asset/functions.js"></script>
+  <script src="./asset/love.js"></script>
+
+  <style>
+    body {
+      overflow: hidden;
+      background: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="main">
+    <div id="wrap">
+      <div id="text">
+        <div id="code">
+          <font color="#000">
+            <span class="say">-------------MỪNG NGÀY 20/10-------------</span><br>
+            <span class="say">Chúc mừng 20/10 đến những bông hoa rực rỡ đã làm bạn với tớ những năm tháng quaaaa!!</span><br>
+              <span class="say"> </span><br>
+              <span class="say">Dù bạn là ai, đang ở đâu. Tớ đều nhớ tới bạn và gửi bạn bức thư siêu siêu cute này^-^.</span><br>
+              <span class="say">Nhân ngày 20/10 này, tớ xin chúc bạn mãi xinh đẹp, đáng yêu, luôn hạnh phúc. Chúc bạn luôn gặp may mắn trong cuộc sống và vui vẻ mọi lúc mọi nơi. Đối với tớ nụ cười của cậu còn sáng hơn ánh mặt trời đấyyy!.</span><br>
+              <span class="say">Chúc bạn ngày 20/10 thật vui vẻ và tràn đầy sự xinh đẹp cùng với nhiều yêu thương. </span><br>
+              <span class="say"><span class="space"><img width="100px" height="100px" src="image/tym.png" alt=""><br>
+              <span class="say"><span class="space"></span> --Someone who holds you dear-- </span>
+          </font>
+        </div>
+      </div>
+      <canvas id="canvas" width="1100" height="680"></canvas>
+    </div>
+  </div>
+
+  <audio id="myAudio" autoplay loop>
+    <source src="music/nhac.mp3" type="audio/mp3" />
+  </audio>
+
+  <script src="./asset/script.js"></script>
+
+  <!-- 🌸 Gọi file vòng quay (xuất hiện sau hiệu ứng) -->
+  <script>
+    const EFFECT_DURATION = 90000; // 30 giây
+    setTimeout(() => {
+      const script = document.createElement('script');
+      script.src = './asset/wheel.js';
+      document.body.appendChild(script);
+
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = './asset/wheel.css';
+      document.head.appendChild(link);
+    }, EFFECT_DURATION);
+  </script>
+</body>
+</html>

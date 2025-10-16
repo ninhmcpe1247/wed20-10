@@ -1,0 +1,105 @@
+#wheelPopup {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(circle at center, rgba(255,192,203,0.2), rgba(0,0,0,0.9));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1.5s ease, transform 1s ease;
+  transform: scale(0.95);
+  z-index: 999;
+}
+#wheelPopup.show {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: all;
+}
+
+#wheelContainer {
+  position: relative;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  border: 8px solid #ff66cc;
+  overflow: hidden;
+  box-shadow: 0 0 40px #ff66cc;
+}
+#wheelContainer .slice {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0% 0%;
+  background: linear-gradient(135deg, #ff99cc, #ff66b2);
+  border: 1px solid #330022;
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8px;
+  text-shadow: 0 0 4px #000;
+}
+
+#pointer {
+  position: absolute;
+  top: -25px;
+  left: calc(50% - 12px);
+  width: 0;
+  height: 0;
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 25px solid #ff66cc;
+  filter: drop-shadow(0 0 6px #ff99cc);
+}
+
+#spinBtn {
+  margin-top: 420px;
+  padding: 12px 28px;
+  background: #ff66cc;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 0 20px #ff66cc;
+  transition: 0.3s;
+}
+#spinBtn:hover {
+  background: #ff99cc;
+  box-shadow: 0 0 30px #ff99cc;
+}
+
+#resultPopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  background: rgba(0, 0, 0, 0.85);
+  border: 2px solid #ff99cc;
+  border-radius: 16px;
+  padding: 24px 36px;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  box-shadow: 0 0 40px #ff66cc;
+  z-index: 1000;
+  transition: transform 0.4s ease;
+}
+#resultPopup.show {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+#resultPopup button {
+  margin-top: 16px;
+  padding: 8px 16px;
+  background: #ff99cc;
+  border: none;
+  border-radius: 8px;
+  color: #330022;
+  cursor: pointer;
+}
